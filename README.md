@@ -1,5 +1,9 @@
 # Local Print Bridge
 
+> [!WARNING]
+> **This lets an AI agent run ARBITRARY CODE on your Mac.** Installing it gives the Minds agent a persistent way to run any code it wants on your computer, as you, for as long as it stays installed — not just printing. Only enable it if you fully trust the agent (and whatever controls it) with that. See the security note below.
+
+
 Print from a Minds mind to the user's own Mac printer over the file-only bridge (proof of concept).
 
 A Minds mind normally can't run anything on your Mac -- the only thing it
