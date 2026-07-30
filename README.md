@@ -9,10 +9,9 @@
 </p>
 
 <p align="center">
-  <a href="https://boweiliu.github.io/open-in-minds/?git_url=https://github.com/boweiliu/local-print-bridge"><img alt="Open in Minds" src="https://img.shields.io/badge/Open%20in%20Minds-5B4BDB?style=for-the-badge"></a>
+  <a href="https://boweiliu.github.io/open-in-minds/?git_url=https://github.com/boweiliu/local-print-bridge"><img alt="Open in Minds" height="64" src="https://img.shields.io/badge/Open%20in%20Minds-5B4BDB?style=for-the-badge"></a>
 </p>
 
-Prefer the raw deep link? Paste `minds://create?git_url=https://github.com/boweiliu/local-print-bridge` into your browser.
 
 Print from a Minds mind to the user's own Mac printer over the file-only bridge (proof of concept).
 
