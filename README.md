@@ -1,14 +1,10 @@
 # Local Print Bridge
 
-> [!WARNING]
-> **This lets an AI agent run ARBITRARY CODE on your Mac.** Installing it gives the Minds agent a persistent way to run any code it wants on your computer, as you, for as long as it stays installed — not just printing. Only enable it if you fully trust the agent (and whatever controls it) with that. See the security note below.
+**Let a Minds mind print to your own printer — one click to install, then just ask.**
 
+![A Minds chat sends a file that prints a test page on a local printer](assets/hero.svg)
 
-<p align="center">
-  <img src=".agents/skills/local-print-bridge/assets/hero.svg" alt="A Minds chat sends a file that prints a test page on a local printer" width="600">
-</p>
-
-## Open in Minds
+## Install in Minds
 
 <p align="center">
   <a href="https://boweiliu.github.io/open-in-minds/?git_url=https://github.com/boweiliu/local-print-bridge">
@@ -16,35 +12,65 @@
   </a>
 </p>
 
+Didn't work? Create a Minds workspace and paste this to your agent:
+`/use-inspiration https://github.com/boweiliu/local-print-bridge`
 
-Print from a Minds mind to the user's own Mac printer over the file-only bridge (proof of concept).
+Don't have Minds? [Download it here](https://imbue.com/minds/).
 
-A Minds mind normally can't run anything on your Mac -- the only thing it
-shares with your machine is a file-drop folder. This inspiration turns that
-file-only channel into real printing: you double-click one setup file once, and
-after that you just ask the mind to print something and a page comes out of your
-own default printer. The mind drops the file into a shared folder, a tiny
-background helper on your Mac sends it to the printer and leaves a receipt, and
-the mind reads that receipt back to confirm -- and can repair or upgrade the
-helper remotely, so you never set it up again. **It is a proof of concept, and
-a blunt one:** once installed, the helper is by design a persistent way for the
-mind to run arbitrary code as you on your Mac, so only turn it on if you'd trust
-the mind with that.
+## Why you'd want this
 
-This repository is a published **minds inspiration**: a clean, bootable
-snapshot of the apps and features a mind built, ready to adapt into your own.
-It is NOT the generic workspace template -- it is this specific project.
+A Minds mind can't normally touch your hardware — the only thing it shares with
+your Mac is a file-drop folder. This turns that file-only channel into real
+printing: ask the mind to print something and a page comes out of your own
+printer, with the mind reading a receipt back to confirm.
 
-## Use it
+## How to use it
 
-- **Create a new mind from it:** point a new minds workspace at this repo's
-  URL. On first boot the mind reads the inspiration and helps you connect your
-  own accounts and adapt it.
-- **Bring it into an existing mind:** run `/use-inspiration <this repo's URL>`.
+1. **Give Minds file access.** Approve the `file-sharing` permission so the mind
+   can write to a folder on your Mac (e.g. `~/tmp/minds_data`).
+2. **Run the one-time setup.** In Finder, double-click **Set Up Minds Printing**
+   — a `.terminal` file the mind places in that folder. It installs a small
+   background helper and prints a confirmation. No restart, nothing else to do.
+3. **Ask Minds to print.** Send it a file or ask it to print something; it goes
+   to your default printer and Minds confirms it printed. You never set this up
+   again.
 
-## What's inside
+## How it works
 
-- **Local Print Bridge** -- [`inspiration-local-print-bridge.md`](inspiration-local-print-bridge.md) (published now)
+Minds can hand files back and forth with your Mac, but it can't press buttons or
+run programs there on its own. So the one-time setup drops a small helper onto
+your Mac. From then on it works like a shared outbox:
 
-Each `inspiration-<slug>.md` is the full manifest for that inspiration: what
-it is, how it works, the prerequisites it needs, and how to adapt it.
+- When you ask Minds to print, it puts the file in a shared folder.
+- The helper, which checks that folder every few seconds, sends the file to your
+  printer and leaves a "printed" note behind.
+- Minds reads that note back to confirm it worked.
+
+The helper also looks after itself — if something breaks, Minds can repair it
+through that same shared folder, so you never have to set it up again.
+
+## Security
+
+> [!CAUTION]
+> **This is arbitrary code execution, not just printing.** The installed helper
+> is a general-purpose way for the agent to run any code on your Mac as you. Treat
+> enabling it as "let this agent run anything as me on this computer."
+
+**Proof of concept — read this.** The trade-off is blunt: it lets the mind run
+**any code it wants on your Mac, as you, for as long as it's installed.** That
+background script runs every 15 seconds as your user, and the mind can overwrite
+it at any time. So approving the "just files" access effectively becomes "run
+anything as me." Revoking file access later only stops *new* code — the installed
+helper keeps running (and self-heals) until you remove it. It runs as you (not
+admin) and logs what it does, and you install it knowingly — but only turn it on
+if you'd trust the mind with that.
+
+Uninstall:
+
+```sh
+launchctl bootout gui/$(id -u)/com.minds.printbridge
+rm -f  ~/Library/LaunchAgents/com.minds.printbridge.plist
+rm -rf ~/Library/Application\ Support/MindsPrintBridge ~/tmp/minds_data/printbridge
+```
+
+then revoke file-sharing in Minds.
