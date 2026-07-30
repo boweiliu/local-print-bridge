@@ -15,8 +15,12 @@ Turn on printing for your Minds workspace: ask it to print something and a real
 page comes out of your own printer. Setup is a one-time thing — after that you
 just ask. (Proof of concept — see **Security**.)
 
+## Open in Minds
+
 <p align="center">
-  <a href="https://boweiliu.github.io/open-in-minds/?git_url=https://github.com/boweiliu/local-print-bridge"><img alt="Open in Minds" height="64" src="https://img.shields.io/badge/Open%20in%20Minds-5B4BDB?style=for-the-badge"></a>
+  <a href="https://boweiliu.github.io/open-in-minds/?git_url=https://github.com/boweiliu/local-print-bridge">
+    <img alt="Open in Minds" width="360" src="assets/open-in-minds-button.svg">
+  </a>
 </p>
 
 ## How to use it
