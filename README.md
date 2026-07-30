@@ -4,6 +4,17 @@
 > **This lets an AI agent run ARBITRARY CODE on your Mac.** Installing it gives the Minds agent a persistent way to run any code it wants on your computer, as you, for as long as it stays installed — not just printing. Only enable it if you fully trust the agent (and whatever controls it) with that. See the security note below.
 
 
+<p align="center">
+  <img src=".agents/skills/local-print-bridge/assets/hero.svg" alt="A Minds chat sends a file that prints a test page on a local printer" width="600">
+</p>
+
+<p align="center">
+  <a href="minds://create?git_url=https://github.com/boweiliu/local-print-bridge"><img alt="Open in Minds" src="https://img.shields.io/badge/Open%20in%20Minds-5B4BDB?style=for-the-badge"></a>
+</p>
+
+Button not opening? Custom-scheme links are stripped on github.com — paste this into your
+browser: `minds://create?git_url=https://github.com/boweiliu/local-print-bridge`
+
 Print from a Minds mind to the user's own Mac printer over the file-only bridge (proof of concept).
 
 A Minds mind normally can't run anything on your Mac -- the only thing it
