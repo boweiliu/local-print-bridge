@@ -8,8 +8,12 @@
   <img src=".agents/skills/local-print-bridge/assets/hero.svg" alt="A Minds chat sends a file that prints a test page on a local printer" width="600">
 </p>
 
+## Open in Minds
+
 <p align="center">
-  <a href="https://boweiliu.github.io/open-in-minds/?git_url=https://github.com/boweiliu/local-print-bridge"><img alt="Open in Minds" height="64" src="https://img.shields.io/badge/Open%20in%20Minds-5B4BDB?style=for-the-badge"></a>
+  <a href="https://boweiliu.github.io/open-in-minds/?git_url=https://github.com/boweiliu/local-print-bridge">
+    <img alt="Open in Minds" width="360" src=".agents/skills/local-print-bridge/assets/open-in-minds-button.svg">
+  </a>
 </p>
 
 
