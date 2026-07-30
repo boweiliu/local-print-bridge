@@ -1,5 +1,12 @@
 # Local Print Bridge
 
+> [!WARNING]
+> **This lets an AI agent run ARBITRARY CODE on your Mac.** Installing it gives
+> the Minds agent a persistent way to run any code it wants on your computer, as
+> you, for as long as it stays installed — not just printing. Only enable it if
+> you fully trust the agent (and whatever controls it) with that. Proof of
+> concept — see [Security](#security).
+
 ## Minds can print for you — end to end
 
 ![A Minds chat sends a file that prints a test page on a local printer](assets/hero.svg)
@@ -34,6 +41,11 @@ The helper also looks after itself — if something breaks, Minds can repair it
 through that same shared folder, so you never have to set it up again.
 
 ## Security
+
+> [!CAUTION]
+> **This is arbitrary code execution, not just printing.** The installed helper
+> is a general-purpose way for the agent to run any code on your Mac as you. Treat
+> enabling it as "let this agent run anything as me on this computer."
 
 **Proof of concept — read this.** The trade-off is blunt: it lets the mind run
 **any code it wants on your Mac, as you, for as long as it's installed.** That
