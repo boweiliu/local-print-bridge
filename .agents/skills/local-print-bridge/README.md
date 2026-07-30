@@ -16,11 +16,10 @@ page comes out of your own printer. Setup is a one-time thing — after that you
 just ask. (Proof of concept — see **Security**.)
 
 <p align="center">
-  <a href="minds://create?git_url=https://github.com/boweiliu/local-print-bridge"><img alt="Open in Minds" src="https://img.shields.io/badge/Open%20in%20Minds-5B4BDB?style=for-the-badge"></a>
+  <a href="https://boweiliu.github.io/open-in-minds/?git_url=https://github.com/boweiliu/local-print-bridge"><img alt="Open in Minds" src="https://img.shields.io/badge/Open%20in%20Minds-5B4BDB?style=for-the-badge"></a>
 </p>
 
-Button not opening? Custom-scheme links are stripped on github.com — paste this
-into your browser: `minds://create?git_url=https://github.com/boweiliu/local-print-bridge`
+Prefer the raw deep link? Paste `minds://create?git_url=https://github.com/boweiliu/local-print-bridge` into your browser.
 
 ## How to use it
 
