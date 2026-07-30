@@ -1,27 +1,28 @@
 # Local Print Bridge
 
-> [!WARNING]
-> **This lets an AI agent run ARBITRARY CODE on your Mac.** Installing it gives
-> the Minds agent a persistent way to run any code it wants on your computer, as
-> you, for as long as it stays installed — not just printing. Only enable it if
-> you fully trust the agent (and whatever controls it) with that. Proof of
-> concept — see [Security](#security).
-
-## Minds can print for you — end to end
+**Let a Minds mind print to your own printer — one click to install, then just ask.**
 
 ![A Minds chat sends a file that prints a test page on a local printer](assets/hero.svg)
 
-Turn on printing for your Minds workspace: ask it to print something and a real
-page comes out of your own printer. Setup is a one-time thing — after that you
-just ask. (Proof of concept — see **Security**.)
-
-## Open in Minds
+## Install in Minds
 
 <p align="center">
   <a href="https://boweiliu.github.io/open-in-minds/?git_url=https://github.com/boweiliu/local-print-bridge">
     <img alt="Open in Minds" width="360" src="assets/open-in-minds-button.svg">
   </a>
 </p>
+
+Didn't work? Create a Minds workspace and paste this to your agent:
+`/use-inspiration https://github.com/boweiliu/local-print-bridge`
+
+Don't have Minds? [Download it here](https://imbue.com/minds/).
+
+## Why you'd want this
+
+A Minds mind can't normally touch your hardware — the only thing it shares with
+your Mac is a file-drop folder. This turns that file-only channel into real
+printing: ask the mind to print something and a page comes out of your own
+printer, with the mind reading a receipt back to confirm.
 
 ## How to use it
 
@@ -73,8 +74,3 @@ rm -rf ~/Library/Application\ Support/MindsPrintBridge ~/tmp/minds_data/printbri
 ```
 
 then revoke file-sharing in Minds.
-
----
-
-Setup details for the mind and adaptation notes: see `SKILL.md`. Requires macOS
-+ CUPS.
