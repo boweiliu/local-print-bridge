@@ -2,7 +2,7 @@
 
 **Let a Minds mind print to your own printer — one click to install, then just ask.**
 
-![A Minds chat sends a file that prints a test page on a local printer](assets/hero.svg)
+![A Minds chat sends a file that prints a test page on a local printer](.agents/skills/local-print-bridge/assets/hero.svg)
 
 ## Install in Minds
 
