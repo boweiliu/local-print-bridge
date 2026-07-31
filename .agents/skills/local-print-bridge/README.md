@@ -2,13 +2,13 @@
 
 **Let a Minds mind print to your own printer — one click to install, then just ask.**
 
-![A Minds chat sends a file that prints a test page on a local printer](.agents/skills/local-print-bridge/assets/hero.svg)
+![A Minds chat sends a file that prints a test page on a local printer](assets/hero.svg)
 
 ## Install in Minds
 
 <p align="center">
   <a href="https://boweiliu.github.io/open-in-minds/?git_url=https://github.com/boweiliu/local-print-bridge">
-    <img alt="Open in Minds" width="360" src=".agents/skills/local-print-bridge/assets/open-in-minds-button.svg">
+    <img alt="Open in Minds" width="360" src="assets/open-in-minds-button.svg">
   </a>
 </p>
 
